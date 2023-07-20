@@ -1,0 +1,37 @@
+  app.route(`/auth/register`).post(authController.Registrasi);
+  app.route(`/auth/login`).post(authController.Login);
+  app.route(`/auth/logout`).get(authController.Logout);
+  app
+    .route(`/auth/verifikasi`)
+    .post(authController.Verifikasi("/auth/verifikasi", false));
+
+  app.route(`/`).get(homeController.Index);
+  RouteGroup(app, "/user", false, userController);
+  RouteGroup(app, "/fakultas", false, fakultasController);
+  RouteGroup(app, "/galeri/fakultas", false, galeriFakultasController);
+  RouteGroup(app, "/medsos", false, medsosFakultasController);
+  RouteGroup(app, "/ukm", false, ukmController);
+  RouteGroup(app, "/layanan", false, layananController);
+  RouteGroup(app, "/komik", false, komikController);
+  RouteGroup(app, "/galeri/komik", false, galeriKomikController);
+  RouteGroup(app, "/kos", false, kosController);
+  RouteGroup(app, "/galeri/kos", false, galeriKosController);
+  RouteGroup(app, "/fasilitas/kos", false, fasilitasKosController);
+
+
+
+  kwe endpoint e
+
+
+setiap endpoint dwe sub endpoint.
+
+`https://good-plum-dugong-wrap.cyclic.app/${endpoint}` => select kabeh data => method get
+`https://good-plum-dugong-wrap.cyclic.app/${endpoint}/:id` => select salah satu data => method get
+`https://good-plum-dugong-wrap.cyclic.app/${endpoint}/tambah`=> untuk menambah data => method post, nggo ndeleng apa bae sing kdu di isi tyeng ndeleng ng controllere
+`https://good-plum-dugong-wrap.cyclic.app/${endpoint}/ubah/:id`=> untuk merubah data => method put, nggo ndeleng apa bae sing kdu di isi tyeng ndeleng ng controllere
+`https://good-plum-dugong-wrap.cyclic.app/${endpoint}/hapus/:id`=> untuk menghapus data => method delete
+
+
+
+
+Oh iya, kwe JWT e tk non aktifna, ddine ko tyeng nambah, ubah, hapus tanpa kdu login dmin. 
