@@ -1,14 +1,70 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  FlatList,
+  TouchableOpacity,
+  Image,
+} from "react-native";
+import styles from "./welcome.style";
+import { icons, SIZES } from "../../../constants";
 
-import styles from './welcome.style'
+const JobTypes = [
+  "Full-time",
+  "Part-time",
+  "Freelance",
+  "Internship",
+  "Temporary",
+  "Volunteer",
+];
 
 const Welcome = () => {
+  const [activeJobType, setActiveJobType] = useState("Full-time");
   return (
     <View>
-      <Text>Welcome</Text>
-    </View>
-  )
-}
+      <View style={styles.container}>
+        <Text style={styles.userName}>Hello Rifki</Text>
+        <Text style={styles.welcomeMessage}>Find your perfect job</Text>
+      </View>
 
-export default Welcome
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+          <TextInput
+            style={styles.searchInput}
+            value=""
+            onChange={() => {}}
+            placeholder="What are you looking for?"
+          ></TextInput>
+        </View>
+        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+          <Image
+            source={icons.search}
+            style={styles.searchBtnImage}
+            resizeMode="contain"
+          ></Image>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.tabsContainer}>
+        <FlatList
+          data={JobTypes}
+          keyExtractor={(item) => item}
+          contentContainerStyle={{ columnGap: SIZES.small }}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              style={styles.tab(activeJobType, item)}
+              onPress={() => setActiveJobType(item)}
+            >
+              <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+    </View>
+  );
+};
+
+export default Welcome;

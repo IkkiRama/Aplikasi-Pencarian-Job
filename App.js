@@ -1,4 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
+import { useCallback } from "react";
+import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { COLORS, icons, images, SIZES, SAFEAREAVIEW } from "./constants";
@@ -34,7 +36,7 @@ export default function App() {
             ),
             headerRight: () => (
               <ScreenHeaderBtn
-                iconUrl={icons.profile}
+                iconUrl={images.profile}
                 dimension="100%"
               ></ScreenHeaderBtn>
             ),
@@ -42,6 +44,7 @@ export default function App() {
           }}
           name="Home"
           component={Home}
+          // onLayout={onLayoutRootView}
         />
         {/* <Stack.Screen name="About" component={About} /> */}
         {/* <Stack.Screen name="Profile" component={Profile} /> */}

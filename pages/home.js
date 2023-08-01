@@ -21,6 +21,8 @@ export default function Home() {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
           <Welcome></Welcome>
+          <Popularjobs></Popularjobs>
+          <Nearbyjobs></Nearbyjobs>
         </View>
       </ScrollView>
     </SafeAreaView>
