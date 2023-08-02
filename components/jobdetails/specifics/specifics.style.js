@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.large,
     color: COLORS.primary,
     // fontFamily: FONT.bold,
+    fontWeight: "700",
   },
   pointsContainer: {
     marginVertical: SIZES.small,
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium - 2,
     color: COLORS.gray,
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     marginLeft: SIZES.small,
   },
 });

@@ -15,11 +15,13 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: SIZES.large,
     // fontFamily: FONT.medium,
+    fontWeight: "500",
     color: COLORS.primary,
   },
   headerBtn: {
     fontSize: SIZES.medium,
     // fontFamily: FONT.medium,
+    fontWeight: "500",
     color: COLORS.gray,
   },
   cardsContainer: {

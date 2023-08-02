@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     // fontFamily: FONT.bold,
     textAlign: "center",
+    fontWeight: "700",
   },
   companyInfoBox: {
     marginTop: SIZES.small / 2,
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium - 2,
     color: COLORS.primary,
     // fontFamily: FONT.medium,
+    fontWeight: "500",
   },
   locationBox: {
     flexDirection: "row",
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium - 2,
     color: COLORS.gray,
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     marginLeft: 2,
   },
 });

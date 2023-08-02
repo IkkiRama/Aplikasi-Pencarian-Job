@@ -35,3 +35,26 @@ setiap endpoint dwe sub endpoint.
 
 
 Oh iya, kwe JWT e tk non aktifna, ddine ko tyeng nambah, ubah, hapus tanpa kdu login dmin. 
+
+
+
+
+
+<Stack.Screen
+  options={{
+    headerStyle: { backgroundColor: COLORS.lightWhite },
+    headerShadowVisible: false,
+    headerLeft: () => (
+      <ScreenHeaderBtn
+        iconUrl={icons.left}
+        dimension="60%"
+        handlePress={() => navigation.goBack()}
+      ></ScreenHeaderBtn>
+    ),
+    headerTitle: "",
+  }}
+  name="DetailJob"
+  component={DetailJob}
+/>
+
+solve this code, I want to redirect user to previous page when user click on ScreenHeaderBtn component

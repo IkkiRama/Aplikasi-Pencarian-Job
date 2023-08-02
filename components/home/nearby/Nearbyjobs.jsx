@@ -6,16 +6,12 @@ import { COLORS } from "../../../constants";
 import NearbyJobCard from "./../../common/cards/nearby/NearbyJobCard";
 import useFetch from "../../../hook/useFetch";
 
-const Nearbyjobs = () => {
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState(false);
+const Nearbyjobs = ({ onPressHandler }) => {
   const { data, isLoading, error, refetch } = useFetch("search", {
     query: "Python developer in Texas, USA",
-    // page: 1,
     num_pages: 1,
   });
 
-  // console.log(data);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -32,7 +28,11 @@ const Nearbyjobs = () => {
           <Text>Something went wrong</Text>
         ) : (
           data?.map((job) => (
-            <NearbyJobCard job={job} key={`nearby-job-${job?.job_id}`} />
+            <NearbyJobCard
+              job={job}
+              key={`nearby-job-${job?.job_id}`}
+              onPressHandler={onPressHandler}
+            />
           ))
         )}
       </View>

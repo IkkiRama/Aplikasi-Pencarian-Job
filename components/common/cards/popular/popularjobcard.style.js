@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   companyName: {
     fontSize: SIZES.medium,
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     color: "#B3AEC6",
     marginTop: SIZES.small / 1.5,
   },
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
   jobName: (selectedJob, item) => ({
     fontSize: SIZES.large,
     // fontFamily: FONT.medium,
+    fontWeight: "500",
     color: selectedJob === item.job_id ? COLORS.white : COLORS.primary,
   }),
   infoWrapper: {
@@ -47,11 +49,13 @@ const styles = StyleSheet.create({
   publisher: (selectedJob) => ({
     fontSize: SIZES.medium - 2,
     // fontFamily: FONT.bold,
+    fontWeight: "700",
     color: selectedJob === item.job_id ? COLORS.white : COLORS.primary,
   }),
   location: {
     fontSize: SIZES.medium - 2,
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     color: "#B3AEC6",
   },
 });

@@ -19,7 +19,7 @@ const JobTypes = [
   "Volunteer",
 ];
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const [activeJobType, setActiveJobType] = useState("Full-time");
   return (
     <View>
@@ -32,12 +32,15 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=""
-            onChange={() => {}}
+            value={searchTerm}
+            onChangeText={(text) => setSearchTerm(text)}
             placeholder="What are you looking for?"
           ></TextInput>
         </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+        <TouchableOpacity
+          style={styles.searchBtn}
+          onPress={() => handleClick()}
+        >
           <Image
             source={icons.search}
             style={styles.searchBtnImage}
@@ -56,7 +59,10 @@ const Welcome = () => {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.tab(activeJobType, item)}
-              onPress={() => setActiveJobType(item)}
+              onPress={() => {
+                setActiveJobType(item);
+                handleClick();
+              }}
             >
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
             </TouchableOpacity>

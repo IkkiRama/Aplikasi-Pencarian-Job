@@ -8,11 +8,13 @@ const styles = StyleSheet.create({
   },
   userName: {
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     fontSize: SIZES.large,
     color: COLORS.secondary,
   },
   welcomeMessage: {
     // fontFamily: FONT.bold,
+    fontWeight: "700",
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
     marginTop: 2,
@@ -35,6 +37,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     width: "100%",
     height: "100%",
     paddingHorizontal: SIZES.medium,

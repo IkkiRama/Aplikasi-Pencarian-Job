@@ -23,10 +23,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  backBtn: {
+    width: 55,
+    height: 55,
+    borderWidth: 1,
+    marginRight: SIZES.xSmall,
+    borderColor: "#1146c1",
+    borderRadius: SIZES.medium,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   likeBtnImage: {
     width: "40%",
     height: "40%",
     tintColor: "#F37453",
+  },
+  backBtnImage: {
+    width: "40%",
+    height: "40%",
+    tintColor: "#1146c1",
   },
   applyBtn: {
     flex: 1,
@@ -34,13 +49,14 @@ const styles = StyleSheet.create({
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: SIZES.medium,
+    marginLeft: SIZES.xSmall,
     borderRadius: SIZES.medium,
   },
   applyBtnText: {
     fontSize: SIZES.medium,
     color: COLORS.white,
     // fontFamily: FONT.bold,
+    fontWeight: "700",
   },
 });
 

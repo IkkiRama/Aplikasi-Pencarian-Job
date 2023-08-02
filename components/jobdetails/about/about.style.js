@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.large,
     color: COLORS.primary,
     // fontFamily: FONT.bold,
+    fontWeight: "700",
   },
   contentBox: {
     marginVertical: SIZES.small,
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium - 2,
     color: COLORS.gray,
     // fontFamily: FONT.regular,
+    fontWeight: "500",
     marginVertical: SIZES.small / 1.25,
   },
 });

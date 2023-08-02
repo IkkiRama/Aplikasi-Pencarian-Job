@@ -12,17 +12,12 @@ import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "./../../common/cards/popular/PopularJobCard";
 import useFetch from "../../../hook/useFetch";
 
-const Popularjobs = () => {
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState(false);
+const Popularjobs = ({ onPressHandler }) => {
   const { data, isLoading, error, refetch } = useFetch("search", {
     query: "Python developer in Texas, USA",
-    // page: 1,
     num_pages: 1,
   });
   const [selectedJob, setSelectedJob] = useState();
-  const handleCardPress = (item) => {};
-  // console.log(data);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -45,7 +40,7 @@ const Popularjobs = () => {
               <PopularJobCard
                 item={item}
                 selectedJob={selectedJob}
-                handleCardPress={handleCardPress}
+                onPressHandler={onPressHandler}
               />
             )}
             keyExtractor={(item) => item?.job_id}
